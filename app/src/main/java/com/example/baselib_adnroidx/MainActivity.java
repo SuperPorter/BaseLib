@@ -1,14 +1,38 @@
 package com.example.baselib_adnroidx;
 
-import androidx.appcompat.app.AppCompatActivity;
+import android.os.Build;
+import android.view.View;
 
-import android.os.Bundle;
+import androidx.annotation.RequiresApi;
 
-public class MainActivity extends AppCompatActivity {
+import com.example.basecoder.Base.BaseActivity;
+
+public class MainActivity extends BaseActivity {
+    @Override
+    public int BindLayout() {
+        return R.layout.activity_main;
+    }
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+    public void initView() {
+
+    }
+
+    @Override
+    public void initData() {
+
+    }
+
+    @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
+    @Override
+    public Builder createConstant() {
+        return new Builder()
+                .StatusBarColor(false)
+                .CustomizeTitle(findViewById(R.id.main_toolbar));
+    }
+
+    @Override
+    public void WidgetClick(View view) {
+
     }
 }
