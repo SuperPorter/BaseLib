@@ -4,7 +4,7 @@ import android.os.Bundle;
 
 import androidx.annotation.Nullable;
 
-import com.example.basecoder.Base.BaseActivity;
+import com.example.basecoder.Base.BaseToolbarActivity;
 import com.example.basecoder.Base.BaseConstant;
 import com.example.basecoder.Mvp.BaseInterFace.BaseContract;
 
@@ -14,7 +14,7 @@ import com.example.basecoder.Mvp.BaseInterFace.BaseContract;
  * Package:com.example.basecoder.Mvp
  * Description:
  */
-public abstract class BaseMvpActivity extends BaseActivity implements BaseContract.View {
+public abstract class BaseMvpActivity extends BaseToolbarActivity implements BaseContract.View {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {

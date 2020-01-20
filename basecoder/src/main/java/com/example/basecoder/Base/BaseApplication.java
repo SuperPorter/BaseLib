@@ -1,11 +1,12 @@
 package com.example.basecoder.Base;
 
 import android.app.Activity;
+import android.app.ActivityManager;
 import android.content.Context;
 
 import androidx.multidex.MultiDexApplication;
 
-import com.example.basecoder.BaseUtils.ActivityManager;
+import com.example.basecoder.Toast.ToastUtils;
 
 import java.util.Set;
 
@@ -29,7 +30,7 @@ public class BaseApplication extends MultiDexApplication {
         application = this;
         init();
     }
-    
+
     public static BaseApplication getInstance() {
         return application;
     }
@@ -47,8 +48,7 @@ public class BaseApplication extends MultiDexApplication {
      * 初始化话app信息
      */
     private void init() {
-        activityStack = ActivityManager.getInstance();
-//        initFragmentation();
+        ToastUtils.init(this);
     }
 
     public static ActivityManager getActstack() {

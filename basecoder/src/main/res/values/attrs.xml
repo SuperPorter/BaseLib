@@ -2,11 +2,63 @@
 <resources>
 
     <declare-styleable name="MultipleStatusView">
-        <attr name="loadingView" format="reference"/>
-        <attr name="errorView" format="reference"/>
-        <attr name="emptyView" format="reference"/>
-        <attr name="noNetworkView" format="reference"/>
-        <attr name="contentView" format="reference"/>
+        <attr name="loadingView" format="reference" />
+        <attr name="errorView" format="reference" />
+        <attr name="emptyView" format="reference" />
+        <attr name="noNetworkView" format="reference" />
+        <attr name="contentView" format="reference" />
     </declare-styleable>
-
+    <!-- 滚动列表 -->
+    <declare-styleable name="LoopView">
+        <attr name="lv_lineColor" format="color" />
+        <attr name="lv_topBottomTextColor" format="color" />
+        <attr name="lv_centerTextColor" format="color" />
+        <attr name="lv_textSize" format="dimension" />
+        <attr name="lv_canLoop" format="boolean" />
+        <attr name="lv_initPosition" format="integer" />
+        <attr name="lv_drawItemCount" format="integer" />
+    </declare-styleable>
+    <!-- 进度条 -->
+    <declare-styleable name="ProgressView">
+        <attr name="progressIndeterminate" format="boolean" />
+        <attr name="barColor" format="color" />
+        <attr name="rimColor" format="color" />
+        <attr name="rimWidth" format="dimension" />
+        <attr name="spinSpeed" format="float" />
+        <attr name="barSpinCycleTime" format="integer" />
+        <attr name="circleRadius" format="dimension" />
+        <attr name="fillRadius" format="boolean" />
+        <attr name="barWidth" format="dimension" />
+        <attr name="linearProgress" format="boolean" />
+    </declare-styleable>
+    <!-- 正则表达式编辑框 -->
+    <declare-styleable name="RegexEditText">
+        <!-- 正则输入限制 -->
+        <attr name="inputRegex" format="string" />
+        <!-- 常用正则类型 -->
+        <attr name="regexType">
+            <!-- 手机号（只能以 1 开头） -->
+            <enum name="mobile" value="0x01" />
+            <!-- 中文（普通的中文字符） -->
+            <enum name="chinese" value="0x02" />
+            <!-- 英文（大写和小写的英文） -->
+            <enum name="english" value="0x03" />
+            <!-- 整数（非 0 开头的数字） -->
+            <enum name="count" value="0x04" />
+            <!-- 用户名（中文、英文、数字） -->
+            <enum name="name" value="0x05" />
+            <!-- 非空格字符 -->
+            <enum name="nonnull" value="0x06" />
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="LoadingView">
+        <attr name="AnimationType" format="integer">
+            <enum name="Point" value="1" />
+            <enum name="garden" value="2" />
+            <enum name="Spin" value="3" />
+            <enum name="page_load" value="4" />
+            <enum name="Round" value="5" />
+            <enum name="GoogleDinosaur" value="6" />
+        </attr>
+    </declare-styleable>
 </resources>

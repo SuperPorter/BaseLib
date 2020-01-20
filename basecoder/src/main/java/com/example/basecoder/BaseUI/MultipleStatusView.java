@@ -17,10 +17,10 @@ import com.example.basecoder.R;
 import java.util.ArrayList;
 
 /**
- * 类描述：  一个方便在多种状态切换的view
- * <p>
- * 创建人:   续写经典
- * 创建时间: 2016/1/15 10:20.
+ * Description: 多状态管理View
+ * author: Luck-s
+ * date: 2020/1/19
+ * version: V1.0
  */
 @SuppressWarnings("unused")
 public class MultipleStatusView extends RelativeLayout {
@@ -68,10 +68,10 @@ public class MultipleStatusView extends RelativeLayout {
     public MultipleStatusView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         final TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.MultipleStatusView, defStyleAttr, 0);
-        mEmptyViewResId = a.getResourceId(R.styleable.MultipleStatusView_emptyView, R.layout.empty_view);
-        mErrorViewResId = a.getResourceId(R.styleable.MultipleStatusView_errorView, R.layout.error_view);
-        mLoadingViewResId = a.getResourceId(R.styleable.MultipleStatusView_loadingView, R.layout.loading_view);
-        mNoNetworkViewResId = a.getResourceId(R.styleable.MultipleStatusView_noNetworkView, R.layout.no_network_view);
+        mEmptyViewResId = a.getResourceId(R.styleable.MultipleStatusView_emptyView, R.layout.custom_empty_view);
+        mErrorViewResId = a.getResourceId(R.styleable.MultipleStatusView_errorView, R.layout.custom_error_view);
+        mLoadingViewResId = a.getResourceId(R.styleable.MultipleStatusView_loadingView, R.layout.custom_loading_view);
+        mNoNetworkViewResId = a.getResourceId(R.styleable.MultipleStatusView_noNetworkView, R.layout.custom_no_network_view);
         mContentViewResId = a.getResourceId(R.styleable.MultipleStatusView_contentView, NULL_RESOURCE_ID);
         a.recycle();
         mInflater = LayoutInflater.from(getContext());

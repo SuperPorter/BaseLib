@@ -7,6 +7,7 @@ import android.net.NetworkInfo;
 import androidx.annotation.NonNull;
 
 import com.example.basecoder.Base.BaseApplication;
+import com.example.basecoder.Toast.ToastUtils;
 
 import static com.example.basecoder.BaseUtils.NetUtil.NetType.NET_4G;
 import static com.example.basecoder.BaseUtils.NetUtil.NetType.NO_NET;
@@ -30,7 +31,7 @@ public class NetUtil {
     public static boolean checkNetToast() {
         boolean isNet = checkNet();
         if (!isNet) {
-            ToastUtils.showShort("网络不给力哦！");
+            ToastUtils.show("网络不给力啊");
         }
         return isNet;
     }

@@ -1,40 +1,5 @@
 <resources>
-    <!-- 缩放动画 -->
-    <style name="DialogScaleAnim" parent="android:Animation">
-        <item name="android:windowEnterAnimation">@anim/dialog_scale_in</item>
-        <item name="android:windowExitAnimation">@anim/dialog_scale_out</item>
-    </style>
-
-    <!-- ios 动画 -->
-    <style name="DialogIOSAnim" parent="android:Animation">
-        <item name="android:windowEnterAnimation">@anim/dialog_ios_in</item>
-        <item name="android:windowExitAnimation">@anim/dialog_ios_out</item>
-    </style>
-
-    <!-- 顶部弹出动画 -->
-    <style name="DialogTopAnim" parent="android:Animation">
-        <item name="android:windowEnterAnimation">@anim/dialog_top_in</item>
-        <item name="android:windowExitAnimation">@anim/dialog_top_out</item>
-    </style>
-
-    <!-- 底部弹出动画 -->
-    <style name="DialogBottomAnim" parent="android:Animation">
-        <item name="android:windowEnterAnimation">@anim/dialog_bottom_in</item>
-        <item name="android:windowExitAnimation">@anim/dialog_bottom_out</item>
-    </style>
-
-    <!-- 左边弹出动画 -->
-    <style name="DialogLeftAnim" parent="android:Animation">
-        <item name="android:windowEnterAnimation">@anim/dialog_left_in</item>
-        <item name="android:windowExitAnimation">@anim/dialog_left_out</item>
-    </style>
-
-    <!-- 右边弹出动画 -->
-    <style name="DialogRightAnim" parent="android:Animation">
-        <item name="android:windowEnterAnimation">@anim/dialog_right_in</item>
-        <item name="android:windowExitAnimation">@anim/dialog_right_out</item>
-    </style>
-
+    <!-- 对话框默认样式 -->
     <style name="BaseDialogStyle" parent="Theme.AppCompat.DayNight.Dialog.Alert"><!-- @android:style/Theme.Dialog -->
         <!-- 无边框 -->
         <item name="android:windowFrame">@null</item>
@@ -57,8 +22,51 @@
         <!-- 解决 ActionBar 占位导致 Dialog 无法全屏显示的问题 -->
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
-        <!-- ActionMode覆盖Actionbar，不顶下来 -->
+        <!-- ActionMode 覆盖 Actionbar，不顶下来 -->
         <item name="windowActionModeOverlay">true</item>
         <item name="android:windowContentOverlay">@null</item>
+        <!-- 不感知敏感的切换 -->
+        <!--<item name="android:configChanges">orientation|screenSize|keyboardHidden</item>-->
+        <!-- 默认隐藏输入法 -->
+        <!--<item name="android:windowSoftInputMode">stateHidden</item>-->
+        <!-- Dialog 全屏显示 -->
+        <!--<item name="android:windowFullscreen">true</item>-->
     </style>
+
+    <!-- 缩放动画 -->
+    <style name="ScaleAnimStyle" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/dialog_scale_in</item>
+        <item name="android:windowExitAnimation">@anim/dialog_scale_out</item>
+    </style>
+
+    <!-- ios 动画 -->
+    <style name="IOSAnimStyle" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/dialog_ios_in</item>
+        <item name="android:windowExitAnimation">@anim/dialog_ios_out</item>
+    </style>
+
+    <!-- 顶部弹出动画 -->
+    <style name="TopAnimStyle" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/dialog_top_in</item>
+        <item name="android:windowExitAnimation">@anim/dialog_top_out</item>
+    </style>
+
+    <!-- 底部弹出动画 -->
+    <style name="BottomAnimStyle" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/dialog_bottom_in</item>
+        <item name="android:windowExitAnimation">@anim/dialog_bottom_out</item>
+    </style>
+
+    <!-- 左边弹出动画 -->
+    <style name="LeftAnimStyle" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/dialog_left_in</item>
+        <item name="android:windowExitAnimation">@anim/dialog_left_out</item>
+    </style>
+
+    <!-- 右边弹出动画 -->
+    <style name="RightAnimStyle" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/dialog_right_in</item>
+        <item name="android:windowExitAnimation">@anim/dialog_right_out</item>
+    </style>
+
 </resources>
